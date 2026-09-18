@@ -1,0 +1,26 @@
+.report-page { display: grid; grid-template-columns: minmax(260px, .8fr) minmax(420px, 1.2fr); gap: clamp(32px, 8vw, 120px); width: min(1080px, 100%); margin: 0 auto; padding: clamp(48px, 10vw, 120px) 32px; box-sizing: border-box; text-align: left; }
+.intro { padding-top: 24px; }
+.eyebrow { color: #b95c3d; font: 700 11px/1.2 'Trebuchet MS', sans-serif; letter-spacing: 2px; margin: 0 0 18px; }
+.intro h1 { color: #20231f; font: 500 clamp(42px, 6vw, 72px)/.98 Georgia, serif; letter-spacing: -2px; margin: 0 0 24px; }
+.intro h1 em { color: #b95c3d; font-style: italic; }
+.intro-copy { color: #66706a; font: 16px/1.6 'Trebuchet MS', sans-serif; max-width: 320px; }
+.report-form { background: #fbfaf6; border: 1px solid #d9d4c7; box-shadow: 12px 12px 0 #d9d4c7; padding: clamp(24px, 5vw, 46px); }
+.form-heading { display: flex; justify-content: space-between; gap: 20px; border-bottom: 1px solid #d9d4c7; margin-bottom: 28px; }
+.form-heading h2 { color: #20231f; font: 500 28px/1.1 Georgia, serif; margin: 0 0 24px; }
+.form-mark { color: #b95c3d; font: 700 12px 'Trebuchet MS', sans-serif; }
+.field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 14px; }
+label { color: #66706a; display: flex; flex-direction: column; gap: 7px; font: 700 11px 'Trebuchet MS', sans-serif; letter-spacing: .5px; }
+input, select, textarea { background: #fff; border: 1px solid #c9c6bc; border-radius: 0; box-sizing: border-box; color: #20231f; font: 15px 'Trebuchet MS', sans-serif; padding: 12px; width: 100%; }
+textarea { resize: vertical; }
+input:focus, select:focus, textarea:focus { border-color: #b95c3d; outline: 2px solid #e9c6b8; }
+.wide { grid-column: 1 / -1; }
+.upload-field { align-items: center; background: #f2eee5; border: 1px dashed #b95c3d; flex-direction: row; margin-top: 22px; padding: 16px; cursor: pointer; }
+.upload-field strong, .upload-field small { display: block; color: #20231f; font: 14px 'Trebuchet MS', sans-serif; }
+.upload-field small { color: #66706a; font-size: 11px; margin-top: 4px; }
+.upload-field input { display: none; }
+.upload-icon { align-items: center; border: 1px solid #b95c3d; color: #b95c3d; display: flex; font: 24px Georgia, serif; height: 34px; justify-content: center; margin-right: 12px; width: 34px; }
+.preview { display: block; height: 120px; margin-top: 12px; object-fit: cover; width: 100%; }
+.status { font: 13px 'Trebuchet MS', sans-serif; margin: 18px 0 0; }.status.success { color: #39734d; }.status.error { color: #a3382d; }
+.submit-button { background: #20231f; border: 0; color: #fff; cursor: pointer; font: 700 13px 'Trebuchet MS', sans-serif; margin-top: 24px; padding: 15px 22px; width: 100%; }
+.submit-button:hover { background: #b95c3d; }.submit-button:disabled { cursor: wait; opacity: .65; }
+@media (max-width: 760px) { .report-page { display: block; padding: 42px 20px; }.intro { margin-bottom: 40px; }.field-grid { grid-template-columns: 1fr; }.wide { grid-column: auto; }.report-form { box-shadow: 7px 7px 0 #d9d4c7; } }

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+	--font-sans: Georgia, 'Times New Roman', Times, serif;
+	--font-mono: 'IBM Plex Mono', monospace;
+	--font-display: Georgia, 'Times New Roman', Times, serif;
+}
+
+:root {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	margin: 0;
+	background: #101820;
+}
+
+.air-ambience {
+	position: relative;
+	overflow: hidden;
+}
+
+.air-ambience::before,
+.air-ambience::after {
+	content: '';
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.air-ambience::before {
+	background: repeating-linear-gradient(116deg, transparent 0 84px, rgba(94, 234, 212, 0.035) 86px, transparent 89px 168px);
+	mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 75%);
+	animation: air-drift 24s linear infinite;
+}
+
+.air-ambience::after {
+	background: radial-gradient(ellipse at 18% 0%, rgba(45, 212, 191, 0.09), transparent 36%), radial-gradient(ellipse at 88% 28%, rgba(94, 234, 212, 0.055), transparent 32%);
+}
+
+.air-ambience > * {
+	position: relative;
+	z-index: 1;
+}
+
+@keyframes air-drift {
+	from { transform: translateX(-3%); }
+	to { transform: translateX(3%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.air-ambience::before { animation: none; }
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input,
+select,
+textarea {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}

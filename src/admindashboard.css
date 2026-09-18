@@ -1,0 +1,79 @@
+:root{
+  --bg:#f7fafc;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#047857;
+  --accent-dark:#065f46;
+  --danger:#ef4444;
+  --glass: rgba(15,23,42,0.03);
+  --radius:12px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.admin-root{
+  padding:40px 20px;
+  background:var(--bg);
+  min-height:100vh;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+.admin-container{
+  max-width:1200px;
+  margin:0 auto;
+  background:transparent;
+}
+.admin-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 22px;
+  border-radius:10px;
+  margin-bottom:18px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+  backdrop-filter: blur(4px);
+  border:1px solid rgba(2,6,23,0.06);
+}
+.admin-title{
+  margin:0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size:22px;
+  color:#0f172a;
+}
+.admin-sub{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+.back-button{padding:10px 16px;background:var(--accent);color:#fff;border:none;border-radius:10px;cursor:pointer;font-weight:600}
+.back-button:hover{background:var(--accent-dark)}
+
+.filters{display:flex;gap:10px;margin:18px 0}
+.filter-btn{padding:8px 16px;border-radius:999px;border:1px solid rgba(4,120,87,0.12);background:#fff;color:var(--accent);font-weight:600;cursor:pointer}
+.filter-btn.active{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(4,120,87,0.12)}
+.filter-btn .count{margin-left:8px;font-weight:700}
+
+.muted{color:var(--muted)}
+.empty{padding:40px;text-align:center;background:var(--card);border-radius:10px;border:1px solid rgba(2,6,23,0.04);color:var(--muted)}
+
+.table-wrap{overflow:auto;border-radius:12px;background:var(--card);box-shadow:0 8px 30px rgba(2,6,23,0.04);border:1px solid rgba(2,6,23,0.04)}
+.reports-table{width:100%;border-collapse:collapse;font-size:14px}
+.reports-table thead tr{background:var(--accent);color:#fff}
+.reports-table th,.reports-table td{padding:16px;border-bottom:1px solid rgba(2,6,23,0.04);vertical-align:top}
+.reports-table th{font-weight:700;text-align:left}
+.report-row:hover{background:linear-gradient(90deg, rgba(4,120,87,0.02), rgba(15,23,42,0.01))}
+
+.id{font-weight:700;color:#0f172a}
+.issue-head{font-weight:700;color:#0f172a}
+.issue-loc{color:var(--accent);font-weight:600;margin-top:6px}
+.issue-desc{color:#475569;margin-top:8px;font-size:13px;line-height:1.4}
+.reporter-name{font-weight:700}
+.reporter-email{color:var(--muted);font-size:13px}
+
+.sev{display:inline-block;padding:6px 10px;border-radius:8px;color:#fff;font-weight:700;font-size:12px}
+.sev.high{background:#ef4444}
+.sev.medium{background:#f59e0b}
+.sev.low{background:#10b981}
+
+.assigned input{padding:8px 10px;border-radius:8px;border:1px solid rgba(2,6,23,0.06);width:100%;font-size:13px}
+.status select{padding:8px 10px;border-radius:8px;border:1px solid rgba(2,6,23,0.06);font-weight:700}
+.action .delete{padding:8px 10px;border-radius:8px;border:1px solid rgba(239,68,68,0.12);background:transparent;color:var(--danger);cursor:pointer;font-weight:700}
+.action .delete:hover{background:rgba(239,68,68,0.06)}
+
+@media (max-width:800px){
+  .reports-table th:nth-child(3),.reports-table td:nth-child(3){display:none}
+}
